@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Timeline</title>
+    <link rel="stylesheet" href="D:\никита\работа\vs\htmlwork\css\css.css">
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle"></label>
+        <h3 class="heading">Лента времени по истории Беларусии</h3>
+        <div class="container">
+
+            <ul>
+                <li>
+                    <h3 class="title">Средний палеолит</h3>
+                    <p>проникновение первых людей(неандертальцев) на территорию Беларуси</p>
+                    <button class="map-mode">Читать Больше ></button>
+                    <span class="circle"></span>
+                    <span class="date"><b>100-35тыс.лет назад</b></span>
+                </li>
+                <li>
+                    <h3 class="title">2FrontEnd Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet accusamus rem reprehenderit 
+                    similique velit nihil molestias quas maxime quo culpa accusantium.</p>
+                    <button class="map-mode">Read More ></button>
+                    <span class="circle"></span>
+                    <span class="date">July 2024</span>
+                </li>
+                <li>
+                    <h3 class="title">3FrontEnd Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet accusamus rem reprehenderit 
+                    similique velit nihil molestias quas maxime quo culpa accusantium.</p>
+                    <button class="map-mode">Read More ></button>
+                    <span class="circle"></span>
+                    <span class="date">July 2024</span>
+                </li>
+                <li>
+                    <h3 class="title">4FrontEnd Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet accusamus rem reprehenderit 
+                    similique velit nihil molestias quas maxime quo culpa accusantium.</p>
+                    <button class="map-mode">Read More ></button>
+                    <span class="circle"></span>
+                    <span class="date">July 2024</span>
+                </li>
+                <li>
+                    <h3 class="title">5FrontEnd Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet accusamus rem reprehenderit 
+                    similique velit nihil molestias quas maxime quo culpa accusantium.</p>
+                    <button class="map-mode">Read More ></button>
+                    <span class="circle"></span>
+                    <span class="date">July 2024</span>
+                </li>
+            </ul>
+
+        </div>
+    </div> 
+    <div class="map">
+        <img src=".\imag\photo_2024-07-27_17-22-38.jpg" alt="map" class="mapimag">
+    </div>
+    <div class="drow">
+    </div> 
+    <script>
+        const body= document.querySelector('body');
+        const btn= document.querySelector('#darkmode-toggle');
+        const mapmode= document.querySelector('.map-mode');
+        const main= document.querySelector('.main');
+        const mapplace= document.querySelector('.map');
+        const imagmap= document.querySelector('.drow');
+
+        btn.addEventListener('click', ()=>{
+            body.classList.toggle('darkmode');
+        })
+        mapmode.addEventListener('click', ()=>{
+            main.classList.toggle('timeline');
+        })
+        mapmode.addEventListener('click',()=>{ 
+            setTimeout(function(){
+            mapplace.classList.toggle('place');},400)
+        })
+    </script>
+</body>
+</html>
